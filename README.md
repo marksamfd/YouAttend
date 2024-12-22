@@ -1,4 +1,4 @@
-# Welcome to your Expo app 👋
+# Cam Attendance App 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
@@ -12,41 +12,34 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
    npm install
    ```
 
-2. Start the app
+2. Connect your phone and Start the app
 
    ```bash
-    npx expo start
+    npm run start
    ```
 
-In the output, you'll find options to open the app in a
+## Trials
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### 1. [Faceapi](https://github.com/justadudewhohacks/face-api.js) by justadudewhohacks
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+I created a side project similar to this and I used this library in a side project and i tried to adapt it to the app but the library was using an older version or Tensorflow and it was not compitable with React Native and Expo
 
-## Get a fresh project
+### 2. [tflite](https://www.npmjs.com/package/@tensorflow/tfjs-react-native) by Tensorflow
 
-When you're ready, run:
+i tried to adapt this library to faceapi but it was a fail
 
-```bash
-npm run reset-project
-```
+### 3. [VisionCamera ](https://github.com/mrousavy/react-native-vision-camera) by mrousavy
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+#### 1. [react-native-fast-tflite](https://github.com/mrousavy/react-native-fast-tflite) by mrousavy
 
-## Learn more
+i tried to use this library but due to updates in react native and new architecture it was giving errors
 
-To learn more about developing your project with Expo, look at the following resources:
+#### 2. Kotlin FrameProcessor plugin using [Onnx](https://onnx.ai/)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+it was working but it was working with half percision so the results was not accurate
 
-## Join the community
+#### 3. [react-native-fast-tflite#112](https://github.com/mrousavy/react-native-fast-tflite)
 
-Join our community of developers creating universal apps.
+`"react-native-fast-tflite": "github:mrousavy/react-native-fast-tflite#pull/112/head"` for using the new architecture
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+The app is using sqlited with VectorDb plugin
