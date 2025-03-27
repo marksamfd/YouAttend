@@ -1,45 +1,40 @@
-# Cam Attendance App 👋
+# YouAttend 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+An Expo-based attendance tracking application leveraging face recognition.
 
-`"react-native-fast-tflite": "github:mrousavy/react-native-fast-tflite#pull/112/head"` for using the new architecture
+## Description
 
-## Get started
+This project is an Expo application designed to streamline attendance tracking using face recognition technology. It utilizes SQLite with the VectorDb plugin for efficient data storage and processing.
 
-1. Install dependencies
+## Technologies Used
 
-   ```bash
-   npm install
-   ```
+*   **Expo:**  A framework for building universal native apps for Android, iOS, and web.
+*   **React Native:** A JavaScript framework for writing real, natively rendering mobile applications.
+*   **SQLite:** A self-contained, high-reliability, embedded, full-featured, public-domain, SQL database engine.
+*   **VectorDb Plugin:** vector db to store face embeddings.
+*   **Face Net:**  Currently exploring optimal solutions.
 
-2. Connect your phone and Start the app
+## Installation
 
-   ```bash
+1.  Install dependencies:
+
+    ```bash
+    npm install
+    ```
+
+2.  Connect your phone and start the app:
+
+    ```bash
     npm run start
-   ```
+    ```
 
-## Trials
+## Face Recognition Implementation Trials
 
-### 1. [Faceapi](https://github.com/justadudewhohacks/face-api.js) by justadudewhohacks
+The development process involved experimenting with various face recognition libraries and approaches:
 
-I created a side project similar to this and I used this library in a side project and i tried to adapt it to the app but the library was using an older version or Tensorflow and it was not compitable with React Native and Expo
-
-### 2. [tflite](https://www.npmjs.com/package/@tensorflow/tfjs-react-native) by Tensorflow
-
-i tried to adapt this library to faceapi but it was a fail
-
-### 3. [VisionCamera ](https://github.com/mrousavy/react-native-vision-camera) by mrousavy
-
-#### 1. [react-native-fast-tflite](https://github.com/mrousavy/react-native-fast-tflite) by mrousavy
-
-i tried to use this library but due to updates in react native and new architecture it was giving errors
-
-#### 2. Kotlin FrameProcessor plugin using [Onnx](https://onnx.ai/)
-
-it was working but it was working with half percision so the results was not accurate
-
-#### 3. [react-native-fast-tflite#112](https://github.com/mrousavy/react-native-fast-tflite)
-
-`"react-native-fast-tflite": "github:mrousavy/react-native-fast-tflite#pull/112/head"` for using the new architecture
-
-The app is using sqlited with VectorDb plugin
+*   **[Faceapi](https://github.com/justadudewhohacks/face-api.js) by justadudewhohacks:**  Initial attempt.  Abandoned due to incompatibility with current React Native and Expo versions (outdated TensorFlow version).
+*   **Tensorflow's [`tflite`](https://www.npmjs.com/package/@tensorflow/tfjs-react-native):** Attempted to adapt this library to a face recognition implementation, but the approach was unsuccessful.
+*   **[VisionCamera ](https://github.com/mrousavy/react-native-vision-camera) by mrousavy:** Considered as a potential solution.
+*   **[`react-native-fast-tflite`](https://github.com/mrousavy/react-native-fast-tflite) by mrousavy:** Faced errors related to React Native updates and the New Architecture.
+*   **Kotlin FrameProcessor plugin using [Onnx](https://onnx.ai/):**  Functioned, but produced inaccurate results due to half-precision processing.
+*   **[react-native-fast-tflite#112](https://github.com/mrousavy/react-native-fast-tflite):**  Currently using a specific pull request from `react-native-fast-tflite` to leverage the New Architecture.  `"react-native-fast-tflite": "github:mrousavy/react-native-fast-tflite#pull/112/head"`
